@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "release_test/version"
+require "release_test_nao/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "release_test"
-  spec.version       = ReleaseTest::VERSION
+  spec.name          = "release_test_nao"
+  spec.version       = ReleaseTestNao::VERSION
   spec.authors       = ["NA070"]
   spec.email         = ["naotospace@gmail.com"]
 
