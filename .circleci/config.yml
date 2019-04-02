@@ -6,7 +6,7 @@ jobs:
     steps:
       - add_ssh_keys:
           finerprints:
-            - "46:a0:5b:8b:8c:15:a2:bc:d9:c4:1b:74:40:96:2e:97"
+            - "4c:12:87:00:38:e8:2c:88:06:3d:aa:dd:99:76:8c:19"
       - checkout
       - run:
           name: Setup Rubygems
