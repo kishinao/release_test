@@ -11,8 +11,8 @@ jobs:
       - run:
           name: Publish to Rubygems
           command: |
-            gem build your-gem-name.gemspec
-            gem push "your-gem-name-$(git describe --tags).gem"
+            gem build release_test_nao.gemspec
+            gem push "release_test_nao-$(git describe --tags).gem"
 workflows:
   version: 2
   deploy:
