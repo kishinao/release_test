@@ -1,3 +1,3 @@
-module ReleaseTest
+module ReleaseTestNao
   VERSION = "0.1.0"
 end
