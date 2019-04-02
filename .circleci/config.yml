@@ -5,8 +5,8 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - add_ssh_keys:
-        finerprints:
-          - "46:a0:5b:8b:8c:15:a2:bc:d9:c4:1b:74:40:96:2e:97"
+          finerprints:
+            - "46:a0:5b:8b:8c:15:a2:bc:d9:c4:1b:74:40:96:2e:97"
       - checkout
       - run:
           name: Setup Rubygems
