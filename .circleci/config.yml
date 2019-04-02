@@ -23,7 +23,6 @@ jobs:
             git add lib/release_test_nao/version.rb
             git commit -m "Version $VERSION"
             git push origin master
-            git log
             git log origin/master
             gem build release_test_nao.gemspec
             gem push "release_test_nao-$VERSION.gem"
