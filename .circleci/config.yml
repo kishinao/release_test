@@ -14,7 +14,7 @@ jobs:
       - run:
           name: Update vresion.rb
           command: |
-            sed -i -e "s/VERSION = \"[0-9]{1,}.[0-9]{1,}.[0-9]{1,}\"/VERSION = \"$(git describe --tags | sed -e 's/^v//')\"/" lib/release_test_nao/version.rb 
+            sed -i -e "s/VERSION = \"[0-9]\{1,\}.[0-9]\{1,\}.[0-9]\{1,\}\"/VERSION = \"$(git describe --tags | sed -e 's/^v//')\"/" lib/release_test_nao/version.rb
             git config user.email "2687752+NA070@users.noreply.github.com"
             git config user.name "2687752+NA070"
             git add lib/release_test_nao/version.rb
