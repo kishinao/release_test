@@ -12,7 +12,7 @@ jobs:
           name: Publish to Rubygems
           command: |
             gem build release_test_nao.gemspec
-            gem push "release_test_nao-$(git describe --tags).gem"
+            gem push "release_test_nao-$(git describe --tags | | sed -e 's/^v//').gem"
 workflows:
   version: 2
   deploy:
