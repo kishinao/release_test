@@ -4,10 +4,22 @@ jobs:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
+      - add_ssh_keys:
+        finerprints:
+          - "46:a0:5b:8b:8c:15:a2:bc:d9:c4:1b:74:40:96:2e:97"
       - checkout
       - run:
           name: Setup Rubygems
           command: bash .circleci/setup_rubygems.sh
+      - run:
+          name: Update vresion.rb
+          command: |
+            sed -i -e 's/VERSION = "[0-9]\.[0-9]\.[0-9]"/VERSION = "$(git describe --tags | sed -e 's/^v//')"/' lib/release_test_nao/version.rb
+            git config user.email "2687752+NA070@users.noreply.github.com"
+            git config user.name "2687752+NA070"
+            git add lib/release_test_nao/version.rb
+            git commit -m "Version $(git describe --tags)"
+            git push origin master
       - run:
           name: Publish to Rubygems
           command: |
