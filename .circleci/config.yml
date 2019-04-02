@@ -1,8 +1,25 @@
 version: 2
 jobs:
-  build:
+  publish:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: echo "A first hello"
+      - run:
+          name: Setup Rubygems
+          command: bash .circleci/setup_rubygems.sh
+      - run:
+          name: Publish to Rubygems
+          command: |
+            gem build your-gem-name.gemspec
+            gem push "your-gem-name-$(git describe --tags).gem"
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - publish:
+          filters:
+            tags:
+              only: /^v[0-9](\.[0-9]){2}$/
+            branches:
+              ignore: /.*/
