@@ -8,7 +8,6 @@ Gem::Specification.new do |spec|
   spec.version       = ReleaseTestNao::VERSION
   spec.authors       = ["NA070"]
   spec.email         = ["example@example.com"]
-
   spec.summary       = 'Summary'
   spec.description   = 'Description'
   spec.homepage      = 'http://example.com'
