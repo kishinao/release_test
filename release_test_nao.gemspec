@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "release_test_nao"
   spec.version       = ReleaseTestNao::VERSION
   spec.authors       = ["NA070"]
-  spec.email         = ["naotospace@gmail.com"]
+  spec.email         = ["example@example.com"]
 
   spec.summary       = 'Summary'
   spec.description   = 'Description'
